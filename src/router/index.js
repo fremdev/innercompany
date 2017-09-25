@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Users from '@/components/Users';
+import Examples from '@/components/Examples';
 
 Vue.use(Router);
 
@@ -8,8 +8,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Users',
-      component: Users,
+      name: 'Examples',
+      component: Examples,
     },
   ],
 });

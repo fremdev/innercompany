@@ -11,9 +11,9 @@
 </template>
 
 <script>
-import Profile from './Profile';
-import UsersControls from './UsersControls';
-import users from '../data/users';
+import Profile from '@/components/Profile';
+import UsersControls from '@/components/UsersControls';
+import users from '@/data/users';
 
 export default {
   name: 'users',
