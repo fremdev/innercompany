@@ -12,6 +12,16 @@
       :disabled="currentUser === (total - 1)"
       >Next
     </button>
+    <button
+      class="btn-control"
+      @click="$emit('load')"
+      >Load
+    </button>
+    <button
+      class="btn-control"
+      @click="$emit('unload')"
+      >Unload
+    </button>
   </div>
 </template>
 

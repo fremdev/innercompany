@@ -1,6 +1,9 @@
 <template>
   <div class="profile">
-    <img class="profile__photo" :src="user.photo">
+    <!-- Alternative approach with computed property -->
+    <!-- <img class="profile__photo" :src="isPhoto"> -->
+    <img v-if="user.photo" class="profile__photo" :src="user.photo">
+    <img v-if="!user.photo" class="profile__photo" :src="noPhoto">
     <div class="profile__info">
       <div class="nickname">
         <a :href="user.link" target="_blank">@{{ user.nickname }}</a>
@@ -19,6 +22,18 @@ export default {
     user: {
       type: Object,
       required: true,
+    },
+  },
+
+  data() {
+    return {
+      noPhoto: 'https://yt3.ggpht.com/-h69YUyAFpM8/AAAAAAAAAAI/AAAAAAAAAAA/Np-Axv6HyPs/s288-c-k-no-mo-rj-c0xffffff/photo.jpg',
+    };
+  },
+
+  computed: {
+    isPhoto() {
+      return this.user.photo ? this.user.photo : 'https://yt3.ggpht.com/-h69YUyAFpM8/AAAAAAAAAAI/AAAAAAAAAAA/Np-Axv6HyPs/s288-c-k-no-mo-rj-c0xffffff/photo.jpg';
     },
   },
 };
