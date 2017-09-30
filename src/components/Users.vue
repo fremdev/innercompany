@@ -1,12 +1,15 @@
 <template>
   <div class="users">
-    <profile :user='users[currentUser]' />
+    <div v-if="!users.length">There are no users :(</div>
+    <profile v-if="users.length" :user='users[currentUser]' />
     <users-controls
       class="users-controls"
       :currentUser="currentUser"
       :total="users.length"
       @prevUser="currentUser-=1"
-      @nextUser="currentUser+=1"/>
+      @nextUser="currentUser+=1"
+      @load="loadUsers"
+      @unload="unloadUsers" />
   </div>
 </template>
 
@@ -28,6 +31,16 @@ export default {
       users,
       currentUser: 0,
     };
+  },
+
+  methods: {
+    loadUsers() {
+      this.users = users;
+    },
+
+    unloadUsers() {
+      this.users = [];
+    },
   },
 };
 </script>
