@@ -22,4 +22,12 @@ export default [
     link: 'https://www.youtube.com/channel/UC7R7bcH9-KEBDiGNP1mZnmw',
     photo: 'https://yt3.ggpht.com/-hp_4wt12CCg/AAAAAAAAAAI/AAAAAAAAAAA/5GN7MTdnVlg/s288-c-k-no-mo-rj-c0xffffff/photo.jpg',
   },
+
+  {
+    name: 'Emmancipate Musemwa',
+    nickname: 'emancode',
+    position: 'Software Engineer',
+    link: 'https://www.youtube.com/channel/UCNCDygezl_4AJQ15MX4RqZA',
+    photo: '',
+  },
 ];
